@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="novavacinaid" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="389.0" prefWidth="437.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="poov.projetovacinafx.Controllers.TelaAdicionarController">
+   <children>
+      <Label layoutX="163.0" layoutY="14.0" prefHeight="54.0" prefWidth="111.0" text="NOVA VACINA">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <Group layoutX="219.0" layoutY="158.0" />
+      <GridPane layoutX="58.0" layoutY="65.0" prefHeight="187.0" prefWidth="323.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="75.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="230.0" minWidth="0.0" prefWidth="230.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="24.0" prefWidth="47.0" text="Nome">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" prefHeight="87.0" prefWidth="72.0" text="Descrição" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nomenovavac" prefHeight="25.0" prefWidth="122.0" GridPane.columnIndex="1" />
+            <TextArea fx:id="descricaonovavac" prefHeight="97.0" prefWidth="198.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <Button fx:id="adicionarnovavac" layoutX="67.0" layoutY="313.0" mnemonicParsing="false" onAction="#switchToCriarVacina" text="ADICIONAR">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="cancelarnovavac" layoutX="265.0" layoutY="313.0" mnemonicParsing="false" onAction="#switchToTelaPrincipal" text="CANCELAR">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

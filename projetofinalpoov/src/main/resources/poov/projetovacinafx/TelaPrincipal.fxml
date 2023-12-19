@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="telaplrincipalid" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="678.0" prefWidth="1081.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="poov.projetovacinafx.Controllers.TelaPrincipalController">
+   <children>
+      <Separator layoutX="541.0" layoutY="20.0" orientation="VERTICAL" prefHeight="584.0" prefWidth="1.0" AnchorPane.topAnchor="20.0">
+         <effect>
+            <Blend mode="MULTIPLY" />
+         </effect></Separator>
+      <Group layoutX="62.0" layoutY="41.0" />
+      <Label alignment="CENTER" layoutX="222.0" layoutY="20.0" prefHeight="41.0" prefWidth="107.0" text="Pessoa">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="752.0" layoutY="20.0" prefHeight="41.0" prefWidth="107.0" text="Vacina">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField layoutX="88.0" layoutY="68.0" prefHeight="25.0" prefWidth="156.0" />
+      <TextField layoutX="88.0" layoutY="98.0" prefHeight="25.0" prefWidth="298.0" />
+      <TextField layoutX="88.0" layoutY="127.0" prefHeight="25.0" prefWidth="262.0" />
+      <Label layoutX="37.0" layoutY="73.0" text="Código">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="103.0" text="Nome">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="47.0" layoutY="132.0" text="CPF">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tabelapes" layoutX="37.0" layoutY="260.0" prefHeight="296.0" prefWidth="485.0">
+        <columns>
+          <TableColumn fx:id="TCPcodigo" prefWidth="59.0" text="Código" />
+          <TableColumn fx:id="TCPnome" prefWidth="156.0" text="Nome" />
+            <TableColumn fx:id="TCPcpf" prefWidth="106.0" text="CPF" />
+            <TableColumn fx:id="TCPnascimento" prefWidth="163.0" text="Nascimento" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tabelavac" layoutX="563.0" layoutY="260.0" prefHeight="296.0" prefWidth="387.0">
+         <columns>
+            <TableColumn fx:id="TCVcodigo" prefWidth="130.0" text="Código" />
+            <TableColumn fx:id="TCVnome" prefWidth="95.0" text="Nome" />
+            <TableColumn fx:id="TCVdescricao" prefWidth="161.0" text="Descrição" />
+         </columns>
+      </TableView>
+      <Button layoutX="386.0" layoutY="140.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Pesquisar">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font></Button>
+      <Label layoutX="47.0" layoutY="163.0" text="Nascimento:">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <DatePicker layoutX="102.0" layoutY="183.0" prefHeight="25.0" prefWidth="225.0" />
+      <DatePicker layoutX="102.0" layoutY="216.0" prefHeight="25.0" prefWidth="225.0" />
+      <Label layoutX="24.0" layoutY="188.0" text="A partir de:">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="72.0" layoutY="221.0" text="Até:">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="aplicarvac" layoutX="466.0" layoutY="619.0" mnemonicParsing="false" onAction="#switchToAplicarVac" prefHeight="32.0" prefWidth="156.0" text="Criar Aplicação ">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font></Button>
+      <Label layoutX="587.0" layoutY="73.0" text="Código">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="codigoVacinaTF" layoutX="650.0" layoutY="68.0" prefHeight="25.0" prefWidth="169.0" />
+      <Label layoutX="596.0" layoutY="103.0" text="Nome">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nomeVacinaTF" layoutX="650.0" layoutY="99.0" prefHeight="25.0" prefWidth="298.0" />
+      <Label layoutX="571.0" layoutY="132.0" text="Descrição">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="967.0" layoutY="136.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Pesquisar">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font></Button>
+      <Button fx:id="vacnova" layoutX="967.0" layoutY="260.0" mnemonicParsing="false" onAction="#switchToNova" prefHeight="25.0" prefWidth="100.0" text="Nova">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font></Button>
+      <Button fx:id="editarvac" layoutX="967.0" layoutY="304.0" mnemonicParsing="false" onAction="#switchToEditar" prefHeight="25.0" prefWidth="100.0" text="Editar">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font></Button>
+      <Button fx:id="deletarvac" layoutX="967.0" layoutY="346.0" mnemonicParsing="false" onAction="#switchToRemove" prefHeight="25.0" prefWidth="100.0" text="Remover">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font></Button>
+      <TextArea fx:id="DescricaoVacinaTF" layoutX="652.0" layoutY="134.0" prefHeight="111.0" prefWidth="298.0" />
+   </children>
+</AnchorPane>
